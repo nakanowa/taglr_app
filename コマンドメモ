@@ -101,6 +101,12 @@ heroku open
 
 ============================================
 [rails]
+・rails new
+・gitignoreの編集
+・Gemfileの編集
+・bundle install ,--without production
+・秘密トークンを動的に生成
+・rspec使用設定 rails generate rspec:install
 
 ・rails new 
 <pre>
@@ -153,4 +159,11 @@ end
 
 SampleApp::Application.config.secret_key_base = secure_token
 </pre>
+
+===========================
+[rspec]
+
+
+rails generate integration_test static_pages
+
 
