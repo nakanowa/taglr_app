@@ -1,0 +1,156 @@
+ruby 2.0.0
+rails 4.0
+gem 2.2.2
+
+======================
+
+・RVMを最新に更新
+<pre>
+rvm get stable
+</pre>
+
+・rubyのversion確認
+<pre>
+rvm list
+</pre>
+
+・ruby2.0.0インストール　
+<pre>
+rvm install 2.0.0 --with-openssl-dir=$HOME/.rvm/usr
+
+rvm use 2.0.0@railstutorial_rails_4_0 --create --default
+</pre>
+
+・railsインストール
+<pre>
+gem install rails --version 4.0.5
+</pre>
+
+=========================================================
+
+・gemをbundleする
+<pre>
+bundle install --without production
+bundle update
+bundle install
+</pre>
+
+
+・git
+<pre>
+git config --global user.name "nakanowa"
+git config --global user.email abstract.gathering@gmail.com
+git init
+vi .gitignore
+git add .
+git commit -m "Initialize repository"
+git remote add origin https://github.com/xxxxxx/first_app.git
+git push -u origin master
+</pre>
+
+・sublimeコマンド実行
+<pre>
+sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
+</pre>
+
+・gitコミット実行時のエディタ設定
+<pre>
+git config --global core.editor "subl -w"
+</pre>
+
+・checkoutコマンドのalias
+<pre>
+git config --global alias.co checkout
+</pre>
+
+・git branch
+<pre>
+git branch
+git checkout -b branch-name
+git branch
+
+〜編集〜
+
+git commit -a -m ""
+git checkout master
+git merge branch-name
+
+</pre>
+
+
+・heroku初期設定
+<pre>
+#heroku認証
+heroku login
+
+#herokuのリポジトリにadd
+heroku create
+</pre>
+
+・heroku デプロイ
+<pre>
+#gitを使用してherokuにリポジトリをpush(commit分がpush)
+git push heroku master
+
+#herokuDBのmigrate
+heroku run rake db:migrate
+
+#herokuページのopen
+heroku open
+</pre>
+
+============================================
+[rails]
+
+・rails new 
+<pre>
+rails new xxxx
+rails new sample_app --skip-test-unit
+</pre>
+
+・generate scaffold
+<pre>
+generate scaffold User name:string email:string
+rake db:migrate
+
+</pre>
+
+・rails console
+
+・validates
+<pre>
+  validates :content, length: { maximum: 140 }
+</pre>
+
+・DBの関連付け(User:microposts = 1:*)
+<pre>
+has_many :microposts
+belongs_to :user
+</pre>
+
+・rspecを使用するように変更
+<pre>
+rails generate rspec:install
+</pre>
+
+・secret tokenを動的に生成
+config/initializers/secret_token.rbに以下を追記
+<pre>
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+SampleApp::Application.config.secret_key_base = secure_token
+</pre>
+
