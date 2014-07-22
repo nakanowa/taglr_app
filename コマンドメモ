@@ -166,4 +166,10 @@ SampleApp::Application.config.secret_key_base = secure_token
 
 rails generate integration_test static_pages
 
+◇初期設定
+spec/spec_helper.rbに以下を追加
+<pre>
+config.include Capybara::DSL
+</pre>
+
 
