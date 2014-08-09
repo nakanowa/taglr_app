@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   #ページ毎のタイトルを返す
   def full_title(page_title)
     base_title = "Sample App"
