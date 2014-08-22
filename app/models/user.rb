@@ -17,6 +17,14 @@ def User.encrypt(token)
   Digest::SHA1.hexdigest(token.to_s)
 end
 
+
+def self.prepare_access_token(user)
+  consumer = OAuth::Consumer.new("API key", "API secret",{:site => "http://www.tumblr.com/"})
+  token_hash = {:oauth_token => user.token,:oauth_token_secret => user.secret}
+  access_token = OAuth::AccessToken.from_hash(consumer, token_hash )
+end
+
+
 private
 
   def create_remember_token

@@ -27,5 +27,8 @@ module SampleApp
 
     # bootstrap-sassがAsset Pipelineと互換性を持つようにしておく。
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    #モジュールの自動ロード
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end

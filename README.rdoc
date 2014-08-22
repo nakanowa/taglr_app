@@ -1,5 +1,14 @@
 == README
 
+bundle install --without production
+bundle update
+bundle install
+
+rake db:migrate
+rake db:populate
+rake test:plepare
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

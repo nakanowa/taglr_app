@@ -1,11 +1,17 @@
 <div class="center hero-unit">
   <h1>Welcome to the Sample App</h1>
 
-  <h2>
-    This is the home page for the
-    <a href="http://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
+<li><%= link_to "Tumblr", '/auth/tumblr' %></li>
+
+    <%= form_tag("/search", action: "search") do %>
+      <%= text_field_tag :keyword %>
+      <%= submit_tag "検索" %>
+    <% end %>
+
+
+
+
+
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 </div>

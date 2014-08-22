@@ -11,6 +11,11 @@ gem 'faker', '1.1.2'
 # ページネーション
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
+#
+gem 'omniauth'
+gem 'omniauth-tumblr'
+#定数を一元管理
+gem 'settingslogic'
 
 group :development, :test do
 # Use sqlite3 as the database for Active Record

@@ -24,3 +24,11 @@ doc/
 .DS_Store
 .idea
 .secret
+
+#memo
+コマンドメモ
+tumblr_api.doc
+
+#設定ファイル
+settings.yml
+
