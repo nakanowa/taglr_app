@@ -1,0 +1,87 @@
+{\rtf1\ansi\ansicpg932
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain 11\'8C\'8E\par}
+{\pard\plain\par}
+{\pard\plain \'82\'51\'82\'4F\'81\'46\'91\'E4\'96\'6B\par}
+{\pard\plain \'82\'51\'82\'50\'81\'46\'91\'E4\'96\'6B or \'91\'E4\'92\'86\par}
+{\pard\plain \'82\'51\'82\'51\'81\'46\'91\'E4\'93\'EC\par}
+{\pard\plain \'82\'51\'82\'52\'81\'46\'8D\'82\'97\'59\par}
+{\pard\plain \'82\'51\'82\'53\'81\'46\par}
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain rvm\'82\'CC\'83\'8A\'83\'58\'83\'67\'8A\'6D\'94\'46\par}
+{\pard\plain $rvmlist\par}
+{\pard\plain    ruby-1.9.2-p320 [ x86_64 ]\par}
+{\pard\plain    ruby-1.9.3-p448 [ x86_64 ]\par}
+{\pard\plain =* ruby-2.0.0-p481 [ x86_64 ]\par}
+{\pard\plain    ruby-2.1.2 [ x86_64 ]\par}
+{\pard\plain\par}
+{\pard\plain rvm\'83\'41\'83\'93\'83\'43\'83\'93\'83\'58\'83\'67\'81\'5B\'83\'8B\par}
+{\pard\plain sudo rm -rf ~/.rvm\par}
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain Homebrew\par}
+{\pard\plain \'8C\'F6\'8E\'AE\'83\'79\'81\'5B\'83\'57http://brew.sh/\'82\'CC\'83\'52\'83\'7D\'83\'93\'83\'68\'82\'F0\'8E\'C0\'8D\'73\par}
+{\pard\plain $ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"\par}
+{\pard\plain\par}
+{\pard\plain \'95\'4B\'97\'76\'82\'C8\'83\'70\'83\'62\'83\'50\'81\'5B\'83\'57\'82\'CC\'83\'43\'83\'93\'83\'58\'83\'67\'81\'5B\'83\'8B\par}
+{\pard\plain $ brew update\par}
+{\pard\plain $ brew install openssl\par}
+{\pard\plain $ brew install readline\par}
+{\pard\plain $ brew install rbenv\par}
+{\pard\plain $ brew install ruby-build\par}
+{\pard\plain\par}
+{\pard\plain rbenv\'8F\'E3\'82\'C9\'81\'41\'95\'4B\'97\'76\'82\'C8ruby\'82\'F0\'83\'43\'83\'93\'83\'58\'83\'67\'81\'5B\'83\'8B\par}
+{\pard\plain $rbenv install -l\par}
+{\pard\plain $rbenv install 2.1.1\par}
+{\pard\plain $rbenv rehash\par}
+{\pard\plain\par}
+{\pard\plain \'83\'43\'83\'93\'83\'58\'83\'67\'81\'5B\'83\'8B\'82\'B5\'82\'BD\'83\'6F\'81\'5B\'83\'57\'83\'87\'83\'93\'82\'CC\'8A\'6D\'94\'46\par}
+{\pard\plain $rbenv versions\par}
+{\pard\plain\par}
+{\pard\plain \'83\'66\'83\'74\'83\'48\'83\'8B\'83\'67\'82\'CCruby\'83\'6F\'81\'5B\'83\'57\'83\'87\'83\'93\'82\'CC\'90\'DD\'92\'E8\par}
+{\pard\plain $rbenv global 2.11\par}
+{\pard\plain\par}
+{\pard\plain \'83\'76\'83\'8D\'83\'57\'83\'46\'83\'4E\'83\'67\'96\'88\'82\'C9ruby\'83\'6F\'81\'5B\'83\'57\'83\'87\'83\'93\'82\'F0\'90\'DD\'92\'E8\par}
+{\pard\plain $rbenv local 1.9.9\par}
+{\pard\plain\par}
+{\pard\plain \'83\'6F\'81\'5B\'83\'57\'83\'87\'83\'93\'82\'C9\'91\'CE\'82\'B5\'82\'C4\'81\'41bundler\'82\'F0\'83\'43\'83\'93\'83\'58\'83\'67\'81\'5B\'83\'8B\par}
+{\pard\plain $rbenv exec gem install bundler\par}
+{\pard\plain $rbenv rehash\par}
+{\pard\plain\par}
+{\pard\plain \'83\'6F\'81\'5B\'83\'57\'83\'87\'83\'93\'82\'C9\'91\'CE\'82\'B5\'82\'C4bundle install\par}
+{\pard\plain $rbenv exec bundle update\par}
+{\pard\plain $rbenv exec bundle install\par}
+{\pard\plain \'81\'A8ruby\'8A\'C2\'8B\'AB\'82\'C9install\'82\'B3\'82\'EA\'82\'C4\'82\'B5\'82\'DC\'82\'A4\par}
+{\pard\plain\par}
+{\pard\plain \'83\'76\'83\'8D\'83\'57\'83\'46\'83\'4E\'83\'67\'96\'88\'82\'C9\'81\'41bundle install\'82\'F0\'8E\'C0\'8D\'73\par}
+{\pard\plain $bundle install --path vendor/bundle\par}
+{\pard\plain $rbenv exec bundle list\par}
+{\pard\plain $echo '/vendor/bundle' >> .gitignore\par}
+{\pard\plain\par}
+{\pard\plain \'83\'76\'83\'8D\'83\'57\'83\'46\'83\'4E\'83\'67\'82\'CC\'8B\'4E\'93\'AE\par}
+{\pard\plain $rbenv exec rails s\par}
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain ruby\'83\'6F\'81\'5B\'83\'57\'83\'87\'83\'93\'96\'88\'82\'CCgem\'82\'F0\'93\'FC\'82\'EA\'82\'C8\'82\'A8\'82\'B7\par}
+{\pard\plain $rbenv uninstall -f 2.0.0-p195\par}
+{\pard\plain $rbenv rahash\par}
+{\pard\plain $rbenv install 2.0.0xxx\par}
+{\pard\plain $rbenv rehash\par}
+{\pard\plain\par}
+{\pard\plain rbenv exec\'82\'CCalias\'90\'DD\'92\'E8\par}
+{\pard\plain $alias re='rbenv exec'\par}
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain #################\par}
+{\pard\plain ctrl+`\par}
+{\pard\plain https://sublime.wbond.net/installation#Manual_Instructions\par}
+{\pard\plain\par}
+{\pard\plain\par}
+{\pard\plain\par}
+}

@@ -1,4 +1,60 @@
 
+
+  <div class="navbar">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-6 w-col-small-6 w-col-tiny-6 left-nav">
+          <a class="w-inline-block" href="index.html">
+            <img class="logo" src="images/space-logo.svg" width="37" alt="52f175d20128ab830c0001c0_space-logo.svg">
+            <div class="brand">Taglr</div>
+          </a>
+        </div>
+        <div class="w-col w-col-6 w-col-small-6 w-col-tiny-6 right-nav">
+          <a class="w-inline-block social-btn" href="http://facebook.com/webflow">
+            <img src="images/facebook-icon_black.svg" width="25" alt="52f158327711748d2600072b_facebook-icon_black.svg">
+          </a>
+          <a class="w-inline-block social-btn" href="http://twitter.com/webflowapp">
+            <img src="images/twitter-icon_black.svg" width="25" alt="52f158467711748d2600072c_twitter-icon_black.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% if false %>  
+  <div class="navbar">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-6 w-col-small-6 w-col-tiny-6 left-nav">
+          <a class="w-inline-block" href="/">
+            <img class="logo" src="images/space-logo.svg" width="37" alt="52f175d20128ab830c0001c0_space-logo.svg">
+            <div class="brand">Taglr</div>
+          </a>
+        </div>
+        <div class="w-col w-col-6 w-col-small-6 w-col-tiny-6 right-nav">
+          <%= link_to "Home",    root_path %>
+          <%= link_to "Help",    help_path %>
+              <% if signed_in? %>
+                <%= link_to "Users", users_path %>
+                <%= link_to "Profile", current_user %>
+                <%= link_to "Settings", edit_user_path(current_user) %>
+                 <%= link_to "Sign out", signout_path, method: "delete" %>
+              <% else %>
+                <%= link_to "Sign in", signin_path %>
+              <% end %>
+          <a class="w-inline-block social-btn" href="http://facebook.com/webflow">
+            <img src="images/facebook-icon_black.svg" width="25" alt="52f158327711748d2600072b_facebook-icon_black.svg">
+          </a>
+          <a class="w-inline-block social-btn" href="http://twitter.com/webflowapp">
+            <img src="images/twitter-icon_black.svg" width="25" alt="52f158467711748d2600072c_twitter-icon_black.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+  <% if false %>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
@@ -28,3 +84,4 @@
         </div>
       </div>
     </header>
+  <% end %>
